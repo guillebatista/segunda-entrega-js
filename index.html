@@ -7,30 +7,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="./css/estilos.css">
   <title>Ecommerce</title>
 </head>
 
 <body>
   <div class="container">
-    <header style="background-color: #aaa">
-      <h1 class="text-center">Primer Ecommerce</h1>
+    <header style="background-color: #868585d3">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <div class="d-flex justify-content-between w-100">
+            <a class="navbar-brand" href="#">
+              <span class="d-inline-block align-middle">La tienda de Guille</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
+    
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/imagenes/imagen1.jpg" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/imagenes/imagen2.jpg" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/imagenes/imagen3.jpg" class="d-block w-100" alt="Imagen 3">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
 
+    <div class="container-filtro">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="filtro">Filtrar productos:</label>
+            <input type="text" id="filtro" class="form-control" placeholder="Ingrese el nombre del producto">
+            <input type="number" id="precioMaximo" class="form-control mt-2" placeholder="Monto máximo">
+            <button id="btnFiltrar" class="btn btn-primary mt-2">Filtrar</button>
+          </div>
+        </div>
+      </div>
 
+      <label for="filtroTraining">
+        <input type="checkbox" id="filtroTraining"> Training
+      </label>
+      <label for="filtroRunning">
+        <input type="checkbox" id="filtroRunning"> Running
+      </label>
+      <label for="filtroHombre">
+        <input type="checkbox" id="filtroHombre"> Hombre
+      </label>
+      <label for="filtroMujer">
+        <input type="checkbox" id="filtroMujer"> Mujer
+      </label>
+      <label for="filtroUnisex">
+        <input type="checkbox" id="filtroUnisex"> Unisex
+      </label>
+      <div class="row" id="misProductos">
+      </div>
+    </div>
     <hr>
     <main>
-      <section id="misprods" class="row">
+      <section id="seccionCompra" class="row">
       </section>
-
       <section>
         <h2>Tu carrito de compras:</h2>
         <table class="table table-striped resaltado">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Nombre</th>
               <th>Precio</th>
+              <th>Cantidad</th>
             </tr>
           </thead>
           <tbody id="tablaCompra">
@@ -51,16 +127,22 @@
             <small id="mensaje"></small>
           </label>
           <input type="submit" value="enviar" class="btn btn-success" />
-          <input type="button" value="borrar" class="btn btn-danger" onclick="borrarCampos()">
         </form>
       </section>
     </main>
     <footer class="footer mt-auto py-3 bg-light">
-      <div class="container text-center">
-        <span class="text-muted"> Ecommerce Todos los derechos reservados. 2023</span>
-        <a href="#" class="text-muted ms-3">Términos y condiciones</a>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <span class="text-muted">Ecommerce Todos los derechos reservados. 2023</span>
+          </div>
+          <div class="col text-center">
+            <a href="#" class="text-muted">Términos y condiciones</a>
+          </div>
+        </div>
       </div>
     </footer>
+    
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

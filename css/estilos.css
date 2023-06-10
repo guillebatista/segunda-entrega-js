@@ -12,3 +12,9 @@ h3 {
 #formulario {
     text-align: center;
 }
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+
+
+}
